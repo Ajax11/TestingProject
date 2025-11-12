@@ -219,7 +219,7 @@ Back/
 
 # Logs
 logs
-*.log
+#*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -290,7 +290,7 @@ web_modules/
 !.env.example
 
 # parcel-bundler cache (https://parceljs.org/)
-.cache
+#.cache
 .parcel-cache
 
 # Next.js build output
@@ -312,7 +312,7 @@ dist
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
+#.cache
 
 # Sveltekit cache directory
 .svelte-kit/

@@ -1,24 +1,24 @@
-import InputToFill from "./Artifact";
-import { Button } from "reactstrap";
+import InputToFill from './Artifact.jsx';
+import { Button } from 'reactstrap';
 
 const authorsItems = [
   {
     id: 1,
-    first_name: "Jyoji",
-    last_name: "Morikawa",
-    role: "main",
+    first_name: 'Jyoji',
+    last_name: 'Morikawa',
+    role: 'main',
   },
   {
     id: 2,
-    first_name: "Masashi",
-    last_name: "Kishimoto",
-    role: "main",
+    first_name: 'Masashi',
+    last_name: 'Kishimoto',
+    role: 'main',
   },
   {
     id: 3,
-    first_name: "",
-    last_name: "Chugong",
-    role: "main",
+    first_name: '',
+    last_name: 'Chugong',
+    role: 'main',
   },
 ];
 

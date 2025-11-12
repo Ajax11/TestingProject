@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Table } from "reactstrap";
-import InputToFill from "./Artifact";
-import axios from "axios";
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Table } from 'reactstrap';
+import InputToFill from './Artifact.jsx';
+import axios from 'axios';
 
 const authorsItems = [
   {
     id: 1,
-    first_name: "Jyoji",
-    last_name: "Morikawa",
-    role: "main",
+    first_name: 'Jyoji',
+    last_name: 'Morikawa',
+    role: 'main',
   },
   {
     id: 2,
-    first_name: "Masashi",
-    last_name: "Kishimoto",
-    role: "main",
+    first_name: 'Masashi',
+    last_name: 'Kishimoto',
+    role: 'main',
   },
   {
     id: 3,
-    first_name: "",
-    last_name: "Chugong",
-    role: "main",
+    first_name: '',
+    last_name: 'Chugong',
+    role: 'main',
   },
 ];
 
@@ -32,11 +32,11 @@ const handleDelete = (item) => {
 
 const createItem = toggle => {
   toggle();
-  alert("Crear item");
+  alert('Crear item');
 };
 
 const editItem = item => {
-  alert("Modificar item" + JSON.stringify(item));
+  alert('Modificar item' + JSON.stringify(item));
 };
 
 function AuthorsTable({ authorItems, modal, toggle }) {
@@ -60,7 +60,7 @@ function AuthorsTable({ authorItems, modal, toggle }) {
               }}
             >
               Save Changes
-            </Button>{" "}
+            </Button>{' '}
             <Button color="danger" onClick={toggle}>
               Cancel
             </Button>
@@ -121,7 +121,7 @@ function AuthorView() {
 
   let listAuthors = [];
   axios
-    .get("http://127.0.0.1:8000/api/authors/")
+    .get('http://127.0.0.1:8000/api/authors/')
     .then(response => {
       listAuthors.push(response);
     })
@@ -145,7 +145,7 @@ function AuthorView() {
           <ModalFooter>
             <Button color="primary" onClick={() => createItem(toggle)}>
               Create
-            </Button>{" "}
+            </Button>{' '}
           </ModalFooter>
         </Modal>
       </div>

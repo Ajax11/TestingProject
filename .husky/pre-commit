@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# 1. Ejecutar las herramientas de Python/Django (Black, Flake8, etc.)
+# Esto corre todos los hooks definidos en .pre-commit-config.yaml
+echo "🚀 Ejecutando Pre-commit"
+pre-commit run --files $(git diff --cached --name-only)
+
+echo "🚀 Ejecutando Lint-Staged en frontend/"
+cd frontend || exit 1
+yarn lint-staged
+
+#npm test

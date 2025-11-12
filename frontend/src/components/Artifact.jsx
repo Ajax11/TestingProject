@@ -1,4 +1,4 @@
-import { Label, Input, FormGroup } from "reactstrap";
+import { Label, Input, FormGroup } from 'reactstrap';
 
 function InputToFill({ textLabelInput, textInputType, textInputValue }) {
   return (
