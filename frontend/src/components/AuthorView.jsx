@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Table } from 'reactstrap';
-import InputToFill from './Artifact.jsx';
+import InputToFill from './Artifact';
 import axios from 'axios';
 
 const authorsItems = [
@@ -23,13 +23,11 @@ const authorsItems = [
     role: 'main',
   },
 ];
-
 /*
-const handleDelete = (item) => {
-    alert("delete" + JSON.stringify(item));
+const handleDelete = item => {
+  alert('delete' + JSON.stringify(item));
 };
 */
-
 const createItem = toggle => {
   toggle();
   alert('Crear item');
@@ -128,10 +126,10 @@ function AuthorView() {
     .catch(err => console.log(err));
   console.log(listAuthors);
   /*
-    axios.get("http://127.0.0.1:8000/api/authors/")
-        .then((response) => {console.log(response.data)})
-        .catch((err) => console.log(err));
-    */
+  axios.get("http://127.0.0.1:8000/api/authors/")
+      .then((response) => {console.log(response.data)})
+      .catch((err) => console.log(err));
+  */
 
   return (
     <div>

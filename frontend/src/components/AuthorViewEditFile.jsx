@@ -1,5 +1,6 @@
-import InputToFill from './Artifact.jsx';
+import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
+import InputToFill from './Artifact';
 
 const authorsItems = [
   {
@@ -48,6 +49,17 @@ function AuthorsBody({ authorItems }) {
   ));
   return <div>{listItems}</div>;
 }
+
+AuthorsBody.propTypes = {
+  authorItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      first_name: PropTypes.string,
+      last_name: PropTypes.string,
+      role: PropTypes.string,
+    }),
+  ).isRequired,
+};
 
 function AuthorView() {
   return (
